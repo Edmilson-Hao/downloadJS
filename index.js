@@ -1,4 +1,4 @@
-const link = 'https://sereduc.blackboard.com/bbcswebdav/library/Library%20Content/%28LMS%29%20-%20Do%20Not%20Delete/%28LMS%29%20GRADUACAO%20-%20Do%20Not%20Delete/SCORM/CRESCIMENTO%2C%20DESENVOLVIMENTO%20E%20ENVELHECIMENTO%20HUMANO/SCORM/contents/EBOOK/E-book_pagina_'
+const link = 'link'
 let i = 11
 
 function download(link, count) {
