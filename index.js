@@ -1,6 +1,6 @@
 document.body.innerHTML = ''
 
-const link = 'https://sereduc.blackboard.com/bbcswebdav/library/Library%20Content/%28LMS%29%20-%20Do%20Not%20Delete/%28LMS%29%20GRADUACAO%20-%20Do%20Not%20Delete/SCORM/EMPREENDEDORISMO/EBOOK/contents/ebook/p'
+const link = 'link'
 let i = 141
 let numberOfPagesToOpen = 20
 
