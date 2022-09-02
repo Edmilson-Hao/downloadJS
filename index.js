@@ -1,22 +1,25 @@
-document.body.innerHTML = ''
+//const link = 'https://sereduc.blackboard.com/bbcswebdav/library/Library%20Content/%28LMS%29%20-%20Do%20Not%20Delete/%28LMS%29%20GRADUACAO%20-%20Do%20Not%20Delete/SCORM/APRENDIZAGEM%20E%20CONTROLE%20MOTOR/SCORM/contents/EBOOK/E-book_pagina_01.jpg'
 
-const link = 'link'
-let i = 141
-let numberOfPagesToOpen = 20
+const paginas = document.getElementById('paginas')
+const link = document.getElementById('link')
+const sufixoLink = document.getElementById('sufixoLink')
+const zeroUm = document.getElementById('zeroUm')
+const ok = document.getElementById('ok')
+var count = 1
 
-function download(link, count) {
-  var a = document.createElement("a");
-  var fileName = 'E-book_pagina_' + count + ').jpg'
-  a.href = link + count + '.jpg';
-  a.setAttribute("download", fileName);
-  a.target = '_blank';
-  a.click();
+const creatingNewElement = () => {
+    count >= 10 ? count = count : zeroUm.checked === 'false' ? count = count : count = '0' + count
+    const img = document.createElement("img");
+    const finalLink = link.value + count + sufixoLink.value
+    img.src = finalLink
+    document.body.append(img)
 }
 
 
-
-document.addEventListener('click', e => {
-    for(let index = i; index < i+numberOfPagesToOpen; index++){
-        download(link, index)
+ok.addEventListener('click', e => {
+    document.body.innerHTML = ''
+    for (let i = 1; i <=paginas.value; i++) {
+        creatingNewElement()
+        count++
     }
 })
